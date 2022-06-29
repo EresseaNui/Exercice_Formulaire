@@ -1,0 +1,40 @@
+<ul>
+  <div *ngFor="let user of users">
+    <app-user-card [user]="user"></app-user-card>
+  </div>
+</ul>
+
+<form [formGroup]="user" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="lastName">Nom :</label>
+    <input type="text" formControlName="lastName" />
+    <span *ngIf="form['lastName'].invalid && isSubmitted">
+      * Minimum 2 caractères</span
+    >
+    <label for="firstName">Prenom :</label>
+    <input type="text" formControlName="firstName" />
+    <span *ngIf="form['firstName'].invalid && isSubmitted">
+      * Minimum 2 caractères</span
+    >
+  </div>
+  <div>
+    <label for="email">Email :</label>
+    <input type="mail" formControlName="email" />
+    <span *ngIf="form['email'].invalid && isSubmitted">
+      * Format mail invalide</span
+    >
+    <label for="phone">Telephone :</label>
+    <input type="tel" formControlName="phone" />
+    <span *ngIf="form['phone'].invalid && isSubmitted">
+      * Format téléphone invalide</span
+    >
+  </div>
+  <div>
+    <label for="company">Entreprise :</label>
+    <input type="text" formControlName="company" />
+    <span *ngIf="form['company'].invalid && isSubmitted">
+      * Minimum 2 caractères</span
+    >
+  </div>
+  <button type="submit">Ajouter</button>
+</form>
