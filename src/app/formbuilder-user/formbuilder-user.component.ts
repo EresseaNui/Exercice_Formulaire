@@ -18,10 +18,10 @@ export class FormbuilderUserComponent implements OnInit {
   ];
 
   user: FormGroup = this.formBuilder.group({
-    lastName: ['', Validators.minLength(2)],
-    firstName: ['', Validators.minLength(2)],
+    lastName: ['', [Validators.required, Validators.minLength(2)]],
+    firstName: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
-    company: ['', Validators.minLength(2)],
+    company: ['', [Validators.required, Validators.minLength(2)]],
     phone: ['', [Validators.minLength(10), Validators.pattern('[- +()0-9]+')]],
   });
 

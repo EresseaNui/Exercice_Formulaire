@@ -1,0 +1,29 @@
+span {
+  color: red;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: large;
+}
+.container button {
+  margin-top: 1rem;
+}
+button {
+  background-color: #02b4f2;
+  border-radius: 15px;
+  color: #fff;
+  border-color: #fff;
+  padding: 1rem;
+}
+button:hover {
+  background-color: #008abd;
+}
+.container label {
+  margin-top: 0.5rem;
+}

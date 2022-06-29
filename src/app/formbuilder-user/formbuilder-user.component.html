@@ -5,19 +5,19 @@
 </ul>
 
 <form [formGroup]="user" (ngSubmit)="onSubmit()">
-  <div>
+  <div class="container">
     <label for="lastName">Nom :</label>
     <input type="text" formControlName="lastName" />
     <span *ngIf="form['lastName'].invalid && isSubmitted">
       * Minimum 2 caractères</span
     >
+
     <label for="firstName">Prenom :</label>
     <input type="text" formControlName="firstName" />
     <span *ngIf="form['firstName'].invalid && isSubmitted">
       * Minimum 2 caractères</span
     >
-  </div>
-  <div>
+
     <label for="email">Email :</label>
     <input type="mail" formControlName="email" />
     <span *ngIf="form['email'].invalid && isSubmitted">
@@ -28,13 +28,13 @@
     <span *ngIf="form['phone'].invalid && isSubmitted">
       * Format téléphone invalide</span
     >
-  </div>
-  <div>
+
     <label for="company">Entreprise :</label>
     <input type="text" formControlName="company" />
     <span *ngIf="form['company'].invalid && isSubmitted">
       * Minimum 2 caractères</span
     >
+
+    <button type="submit">Ajouter</button>
   </div>
-  <button type="submit">Ajouter</button>
 </form>
